@@ -4,7 +4,7 @@ import "../Files/css/Register.css";
 
 function Register() {
 	const [form, setForm] = useState({});
-	const [pop, setPop] = useState(true);
+	const [pop, setPop] = useState(false);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();

@@ -4,14 +4,17 @@ import "../Files/css/Register.css";
 
 function Register() {
 	const [form, setForm] = useState({});
+	const [pop, setPop] = useState(true);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		console.log(form);
+
 		axios
 			.post(`http://localhost:8080/api/employee/register`, form)
 			.then((res) => {
 				console.log(res);
+				setPop(true);
 			});
 	};
 
@@ -19,6 +22,10 @@ function Register() {
 		<>
 			<section className="registerSection">
 				<h1>Registration Form</h1>
+				<a href="/details" className="details_button">All Details</a>
+				{pop ? <p className="pop">Register Complete</p> : null}
+
+
 				<form onSubmit={(e) => handleSubmit(e)}>
 					<div>
 						<label htmlFor="e_name">Employee Name</label>

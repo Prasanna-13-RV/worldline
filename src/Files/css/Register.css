@@ -63,3 +63,22 @@ input {
 .button:hover {
 	background: #811f1f;
 }
+
+.pop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	margin: 20px;
+	color: white;
+	padding: 5px 10px;
+	background: #ff5353;
+	border-radius: 10px;
+}
+.details_button {
+	/* margin: 20px; */
+	color: white;
+	padding: 5px 10px;
+	background: #ff5353;
+	border-radius: 10px;
+	text-decoration: none;
+}
